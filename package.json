@@ -1,12 +1,12 @@
 {
-  "name": "aa_create_asset",
+  "name": "",
   "version": "1.0.0",
-  "description": "AA Create Asset Window",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Cos",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",

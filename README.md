@@ -1,43 +1,64 @@
-![Materialize logo](https://raw.github.com/dogfalo/materialize/master/images/materialize.gif)
-===========
-
-[![Travis CI badge](https://travis-ci.org/Dogfalo/materialize.svg?branch=master)](https://travis-ci.org/Dogfalo/materialize)
-[![npm version badge](https://badge.fury.io/js/materialize-css.svg)](https://badge.fury.io/js/materialize-css)
-[![dependencies Status badge](https://david-dm.org/Dogfalo/materialize/status.svg)](https://david-dm.org/Dogfalo/materialize)
+# Materialize + Gulp Boilerplate
 [![devDependency Status badge](https://david-dm.org/Dogfalo/materialize/dev-status.svg)](https://david-dm.org/Dogfalo/materialize#info=devDependencies)
-[![Gitter badge](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Dogfalo/materialize?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-[Materialize](http://materializecss.com/), a CSS Framework based on material design
 
-### Current Version : v0.99.0
+[Materialize](http://materializecss.com/), a CSS Framework based on material design. Uses SASS, and has many JS components.
 
-## Sass Requirements:
-- Ruby Sass 3.3+, LibSass 0.6+
+[Gulp](https://github.com/gulpjs/gulp) is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.
 
-## Supported Browsers:
+#### Supported Browsers:
 Chrome 35+, Firefox 31+, Safari 7+, IE 10+
 
-## Quickstart:
-Read the [Getting started page](http://materializecss.com/getting-started.html) for more information about the framework, templates and how to use materialize can be found on the [materializecss website](http://materializecss.com)
+#### Dependencies
+Make sure you have [NPM](https://docs.npmjs.com/getting-started/installing-node) and [Node](https://docs.npmjs.com/getting-started/installing-node) installed before getting started.
 
-- [Download the latest release](https://github.com/Dogfalo/materialize/releases/latest) directly from GitHub
-- Clone the repo: `git clone https://github.com/Dogfalo/materialize.git`
-- Include the files via [cdnjs](https://cdnjs.com/libraries/materialize). More [here](http://materializecss.com/getting-started.html)
-- Install with [npm](https://www.npmjs.com): `npm install materialize-css`
-- Install with [Bower](https://bower.io): `bower install materialize`
+#### Quickstart:
 
-## Compiling Files
-- `npm install`
-- `grunt monitor`, this will compile .scss, .js., .jade files.
+###### 1. Clone materialize_gulp repo
+```shell
+$ git clone git@github.com:jsthack/materialize_gulp.git
+```
+###### 2. Change into materialize_gulp directory
+```shell
+$ cd materialize_gulp
+```
+###### 3. Install gulp locally in your project
+```shell
+$ npm install --save-dev gulp
+```
+###### 4. Install Gulp-Sass locally + save as dev dependancy
+```shell
+$ npm install --save-dev gulp-sass
+```
+###### 5. Install Gulp-Livereload locally + save as dev dependancy
+```shell
+$ npm install --save-dev gulp-livereload
+```
 
-## Changelog
-For changelogs, check out [the Releases section of materialize](https://github.com/Dogfalo/materialize/releases) or the [CHANGELOG.md](CHANGELOG.md)
+##### 6. Then Open the package.json file and edit to your needs
 
-## Testing
-We use Jasmine as our testing framework and we're trying to write a robust test suite for our components. If you want to help, [here's a starting guide on how to write tests in Jasmine](https://docs.google.com/document/d/1dVM6qGt_b_y9RRhr9X7oZfFydaJIEqB9CT7yekv-4XE/edit?usp=sharing)
+---
 
-## Contributing
-[Please read CONTRIBUTING.md for more information](CONTRIBUTING.md)
+#### Folder Structure
 
-## Translation
-If you want to help us translate the documentation into other languages, please send us an email at materializeframework@gmail.com telling us which language team you want to join. We use [Transifex](https://www.transifex.com) as our localization platform and we will send you an invite there.
+```
+materialize_gulp/
+|---css/
+|   |---materialize.css
+|---fonts/
+|---js/
+|---sass
+|   |---components/
+|   |---materialize.scss
+|---gulpfile.js
+|---package.json
+```
+
+### Gulpfile
+The gulpfile is configured to do 2 tasks. Watch all the SCSS files for changes, and compile them into CSS on save. Gulp outputs all the compiled SCSS into a file called materialize.css. It's also configured with Livereload. It watches all the SCSS and HTML files, and on save it will reload your browser.
+
+Configure the Gulpfile to fit your exact needs.
+
+License
+---
+Copyright (c) 2017 Cosmin Haims // Licensed under the MIT License
