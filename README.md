@@ -45,17 +45,19 @@ $ npm install --save-dev gulp-livereload
 materialize_gulp/
 |---css/
 |   |---materialize.css
+|   |---main.css
 |---fonts/
 |---js/
 |---sass
 |   |---components/
 |   |---materialize.scss
+|   |---main.scss
 |---gulpfile.js
 |---package.json
 ```
 
 ### Gulpfile
-The gulpfile is configured to do 2 tasks. Watch all the SCSS files for changes, and compile them into CSS on save. Gulp outputs all the compiled SCSS into a file called materialize.css. It's also configured with Livereload. It watches all the SCSS and HTML files, and on save it will reload your browser.
+The gulpfile is configured to do 2 tasks. Watch all the SCSS files for changes, and compile them into CSS on save. Gulp outputs all the compiled framework SCSS into a file called materialize.css. And compiles your styles in main.scss into a file called main.css. It's also configured with Livereload. It watches all the SCSS and HTML files, and on save it will reload your browser.
 
 Configure the Gulpfile to fit your exact needs.
 
